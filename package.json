@@ -1,0 +1,22 @@
+{
+  "name": "waveorb-code",
+  "version": "0.1.0",
+  "description": "Non-essential but useful Waveorb functions",
+  "main": "index.js",
+  "scripts": {
+    "build": "node scripts/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eldoy/waveorb-code.git"
+  },
+  "author": "Vidar Eldøy <vidar@eldoy.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eldoy/waveorb-code/issues"
+  },
+  "homepage": "https://github.com/eldoy/waveorb-code#readme",
+  "dependencies": {
+    "uglify-js": "^3.17.4"
+  }
+}
