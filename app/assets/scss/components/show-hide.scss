@@ -1,0 +1,9 @@
+show-hide [aria-expanded="true"] {
+  /* Styles for visible content */
+  background: silver;
+}
+
+show-hide [aria-expanded="false"] {
+  /* Styles for hidden content */
+  background: gold;
+}
