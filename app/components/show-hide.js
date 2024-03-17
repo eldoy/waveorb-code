@@ -8,16 +8,10 @@ module.exports = class ShowHide extends HTMLElement {
     // Get parent class properties
     super()
 
-    console.log(this)
-
-    console.log(this.querySelector('[trigger]'))
-
     // Get the elements
     this.trigger = this.querySelector('[trigger]')
     this.content = this.querySelector('[content]')
     if (!this.trigger || !this.content) return
-
-    console.log('NOT FINDING')
 
     // Setup default UI
     this.trigger.removeAttribute('hidden')
@@ -33,7 +27,6 @@ module.exports = class ShowHide extends HTMLElement {
    * @param {Event} event The Event object
    */
   handleEvent(event) {
-    console.log('Handling event')
     // Don't let the button trigger other actions
     event.preventDefault()
 
