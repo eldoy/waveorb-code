@@ -9,6 +9,10 @@ module.exports = class WField extends HTMLElement {
     }
   }
 
+  title(str = '') {
+    return (str[0] || '').toUpperCase() + str.slice(1)
+  }
+
   constructor() {
     super()
 
@@ -17,9 +21,14 @@ module.exports = class WField extends HTMLElement {
       this.atts[node.nodeName] = node.nodeValue
     }
 
+    this.escape('name')
     this.escape('value')
     this.escape('label')
     this.escape('placeholder')
+
+    if (typeof this.atts.label == 'undefined') {
+      this.atts.label = this.title(this.atts.name)
+    }
 
     var n = Math.random().toString(36).replace('0.', '')
     this.identifier = `field_${n}`
@@ -44,11 +53,15 @@ module.exports = class WField extends HTMLElement {
     }
 
     if (type == 'checkbox') {
-      return `<fieldset id="${this.identifier}"><legend>${name}</legend>${this.innerHTML}</fieldset>`
+      return `<fieldset id="${this.identifier}"><legend>${this.title(
+        name
+      )}</legend>${this.innerHTML}</fieldset>`
     }
 
     if (type == 'radio') {
-      return `<fieldset id="${this.identifier}"><legend>${name}</legend>${this.innerHTML}</fieldset>`
+      return `<fieldset id="${this.identifier}"><legend>${this.title(
+        name
+      )}</legend>${this.innerHTML}</fieldset>`
     }
 
     if (type == 'textarea') {
@@ -72,7 +85,7 @@ module.exports = class WField extends HTMLElement {
     if (!this.atts.label) {
       return content
     }
-    return `<label for="${this.identifier}">${this.atts.label}</label>`
+    return `<label for="${this.identifier}">${this.atts.label}</label><br>${content}`
   }
 
   em() {
