@@ -1,5 +1,5 @@
 {
-  "name": "waveorb-components",
+  "name": "waveorb-code",
   "version": "0.1.0",
   "description": "Web components for Waveorb",
   "main": "index.js",
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eldoy/waveorb-components.git"
+    "url": "git+https://github.com/eldoy/waveorb-code.git"
   },
   "author": "Vidar Eldøy <vidar@eldoy.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/eldoy/waveorb-components/issues"
+    "url": "https://github.com/eldoy/waveorb-code/issues"
   },
-  "homepage": "https://github.com/eldoy/waveorb-components#readme",
+  "homepage": "https://github.com/eldoy/waveorb-code#readme",
   "dependencies": {
     "waveorb": "^0.42.0"
   },
