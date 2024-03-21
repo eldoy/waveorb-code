@@ -7,8 +7,18 @@ module.exports = async function ($) {
         <title>${$.page.title || 'Components'}</title>
         ${$.script('/bundle.js')} ${$.style('/bundle.css')}
         ${process.env.NODE_ENV == 'development' ? $.script('/js/dev.js') : ''}
+        <script>
+          var api = waveorb('${$.app.config.env.api}')
+        </script>
       </head>
       <body>
+        <header>
+          <nav>
+            <a href="/">Home</a>
+            <a href="/forms">Forms</a>
+            <a href="/uploads">Uploads</a>
+          </nav>
+        </header>
         <main>${$.page.content}</main>
         <script>
           ${Object.keys($.app.components)
