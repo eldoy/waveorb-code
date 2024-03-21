@@ -5,11 +5,9 @@ module.exports = async function ($) {
     <h3>Normal form</h3>
     <form action="/project/create?id=5">
       <p>
-        <label>
-          Name<br />
-          <input type="text" name="name" value="hello" />
-        </label>
-        <em></em>
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" />
+        <em class="name-errors"></em>
       </p>
       <p>
         <button>Save</button>
