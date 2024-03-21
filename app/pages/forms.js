@@ -1,7 +1,9 @@
+var Form = require(process.cwd() + '/lib/Form.js')
+
 module.exports = async function ($) {
   return /* HTML */ `<h1>Forms</h1>
     <h3>Normal form</h3>
-    <form action="/project/create">
+    <form action="/project/create?id=5">
       <p>
         <label>
           Name<br />
@@ -14,24 +16,7 @@ module.exports = async function ($) {
       </p>
     </form>
     <script>
-      class Form {
-        constructor(form) {
-          if (typeof form == 'string') {
-            form = document.querySelector(form)
-          }
-
-          form.addEventListener('submit', this.handleSubmit)
-
-          this.form = form
-        }
-
-        handleSubmit(event) {
-          event.preventDefault()
-
-          console.log('Submitting')
-        }
-      }
-
+      ${Form}
       window.form = new Form('form')
     </script> `
 }
