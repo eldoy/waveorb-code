@@ -1,3 +1,5 @@
+var Form = require(process.cwd() + '/lib/Form.js')
+
 module.exports = async function ($) {
   return /* HTML */ `<!DOCTYPE html>
     <html lang="en">
@@ -12,6 +14,9 @@ module.exports = async function ($) {
         </script>
       </head>
       <body>
+        <script>
+          window.Form = ${Form}
+        </script>
         <header>
           <nav>
             <a href="/">Home</a>
@@ -19,7 +24,11 @@ module.exports = async function ($) {
             <a href="/uploads">Uploads</a>
           </nav>
         </header>
+        <div class="notify"><div class="flash" id="flash"></div></div>
         <main>${$.page.content}</main>
+        <script>
+          flash()
+        </script>
         <script>
           ${Object.keys($.app.components)
             .map(function (name) {
