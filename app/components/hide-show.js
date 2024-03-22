@@ -1,1 +1,1 @@
-module.exports = require('../../lib/components/hide-show.js')
+module.exports = require('../../lib/hide-show.js')

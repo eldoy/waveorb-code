@@ -1,1 +1,1 @@
-module.exports = require('../../lib/components/submit-field.js')
+module.exports = require('../../lib/submit-field.js')

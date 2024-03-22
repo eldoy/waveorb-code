@@ -23,11 +23,10 @@
     "url": "https://github.com/eldoy/waveorb-components/issues"
   },
   "homepage": "https://github.com/eldoy/waveorb-components#readme",
-  "dependencies": {
-    "waveorb": "^0.42.0"
-  },
   "devDependencies": {
     "concurrently": "^8.2.2",
-    "sass": "^1.72.0"
+    "sass": "^1.72.0",
+    "waveorb": "^0.42.0",
+    "waveorb-form": "^0.1.0"
   }
 }

@@ -1,1 +1,1 @@
-module.exports = require('../../lib/components/input-field.js')
+module.exports = require('../../lib/input-field.js')

@@ -1,4 +1,4 @@
-var Form = require(process.cwd() + '/lib/Form.js')
+var Form = require('waveorb-form')
 
 module.exports = async function ($) {
   return /* HTML */ `<!DOCTYPE html>
@@ -17,13 +17,6 @@ module.exports = async function ($) {
         <script>
           window.Form = ${Form}
         </script>
-        <header>
-          <nav>
-            <a href="/">Home</a>
-            <a href="/forms">Forms</a>
-            <a href="/uploads">Uploads</a>
-          </nav>
-        </header>
         <div class="notify"><div class="flash" id="flash"></div></div>
         <main>${$.page.content}</main>
         <script>

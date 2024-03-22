@@ -1,6 +1,6 @@
 module.exports = async function ($) {
   return /* HTML */ `<h1>Web components</h1>
-    <h3>toggle</h3>
+    <h3>Hide Show</h3>
     <hide-show>
       <button trigger>Show Content</button>
       <div content hidden>
@@ -8,7 +8,7 @@ module.exports = async function ($) {
       </div>
     </hide-show>
 
-    <h3>form with fields</h3>
+    <h3>Form fields</h3>
     <form id="createproject" action="/project/create" onsubmit="return false">
       <input-field name="file" type="file"></input-field>
       <input-field name="file" type="file" progress></input-field>
