@@ -1,61 +1,61 @@
 module.exports = async function ($) {
   return /* HTML */ `<h1>Web components</h1>
     <h3>toggle</h3>
-    <w-toggle>
+    <hide-show>
       <button trigger>Show Content</button>
-      <div content>
+      <div content hidden>
         <p>Hide and show content.</p>
       </div>
-    </w-toggle>
+    </hide-show>
 
     <h3>form with fields</h3>
     <form id="createproject" action="/project/create" onsubmit="return false">
-      <w-field name="file" type="file"></w-field>
-      <w-field name="file" type="file" progress></w-field>
-      <w-field name="file" type="file" progress=".progress"></w-field>
+      <input-field name="file" type="file"></input-field>
+      <input-field name="file" type="file" progress></input-field>
+      <input-field name="file" type="file" progress=".progress"></input-field>
 
-      <w-field name="default"></w-field>
-      <w-field name="text" type="text"></w-field>
-      <w-field name="text" type="text" label="Custom label"></w-field>
-      <w-field name="text" type="text" required></w-field>
-      <w-field name="text" type="text" value="hello"></w-field>
+      <input-field name="default"></input-field>
+      <input-field name="text" type="text"></input-field>
+      <input-field name="text" type="text" label="Custom label"></input-field>
+      <input-field name="text" type="text" required></input-field>
+      <input-field name="text" type="text" value="hello"></input-field>
 
-      <w-field name="hidden" type="hidden"></w-field>
+      <input-field name="hidden" type="hidden"></input-field>
 
-      <w-field name="email" type="email"></w-field>
+      <input-field name="email" type="email"></input-field>
 
-      <w-field name="number" type="number"></w-field>
+      <input-field name="number" type="number"></input-field>
 
-      <w-field name="textarea" type="textarea"></w-field>
+      <input-field name="textarea" type="textarea"></input-field>
 
-      <w-field name="date" type="date"></w-field>
+      <input-field name="date" type="date"></input-field>
 
-      <w-field name="color" type="color"></w-field>
+      <input-field name="color" type="color"></input-field>
 
-      <w-field name="radio" type="radio">
+      <input-field name="radio" type="radio">
         <label><input value="1" /> A</label>
         <label><input value="2" /> A</label>
         <label><input value="3" /> A</label>
-      </w-field>
+      </input-field>
 
-      <w-field name="checkbox" type="checkbox">
+      <input-field name="checkbox" type="checkbox">
         <label><input value="1" /> A</label>
         <label><input value="2" /> A</label>
         <label><input value="3" /> A</label>
-      </w-field>
+      </input-field>
 
-      <w-field name="select" type="select">
+      <input-field name="select" type="select">
         <option value="1">A</option>
         <option value="2">B</option>
         <option value="3">C</option>
-      </w-field>
+      </input-field>
 
-      <w-field name="select" type="select" multiple>
+      <input-field name="select" type="select" multiple>
         <option value="1">A</option>
         <option value="2">B</option>
         <option value="3">C</option>
-      </w-field>
+      </input-field>
 
-      <w-submit>Save</w-submit>
+      <submit-field>Save</submit-field>
     </form>`
 }

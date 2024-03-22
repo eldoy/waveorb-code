@@ -1,16 +1,10 @@
-// Components
-var WField = require('./lib/components/w-field.js')
-var WSubmit = require('./lib/components/w-submit.js')
-var WToggle = require('./lib/components/w-toggle.js')
-
 // Form
-var handleClearErrors = require('./lib/form/handleClearErrors.js')
-var handleFormOptions = require('./lib/form/handleFormOptions.js')
-var handlePayload = require('./lib/form/handlePayload.js')
-var handleQueryParams = require('./lib/form/handleQueryParams.js')
-var handleRedirect = require('./lib/form/handleRedirect.js')
-var handleShowErrors = require('./lib/form/handleShowErrors.js')
-var handleSubmit = require('./lib/form/handleSubmit.js')
+var Form = require('./lib/Form.js')
+
+// Components
+var HideShow = require('./lib/components/hide-show.js')
+var InputField = require('./lib/components/input-field.js')
+var SubmitField = require('./lib/components/submit-field.js')
 
 // Page
 var handleCloseMenus = require('./lib/page/handleCloseMenus.js')
@@ -28,38 +22,20 @@ var sleep = require('./lib/util/sleep.js')
 var toggleVisibility = require('./lib/util/toggleVisibility.js')
 var truncate = require('./lib/util/truncate.js')
 
-// Upload
-var handleUpload = require('./lib/upload/handleUpload.js')
-var handleUploadProgress = require('./lib/upload/handleUploadProgress.js')
-var handleUploadReset = require('./lib/upload/handleUploadReset.js')
-var renderUploadImage = require('./lib/upload/renderUploadImage.js')
-
 module.exports = {
-  // Components
-  'w-field': WField,
-  'w-submit': WSubmit,
-  'w-toggle': WToggle,
-
   // Form
-  handleClearErrors,
-  handleFormOptions,
-  handlePayload,
-  handleQueryParams,
-  handleRedirect,
-  handleShowErrors,
-  handleSubmit,
+  Form,
+
+  // Components
+  'hide-show': HideShow,
+  'input-field': InputField,
+  'submit-field': SubmitField,
 
   // Page
   handleCloseMenus,
   handleCloseWindow,
   handleLogout,
   handleToggleMenu,
-
-  // Upload
-  handleUpload,
-  handleUploadProgress,
-  handleUploadReset,
-  renderUploadImage,
 
   // Util
   goBack,

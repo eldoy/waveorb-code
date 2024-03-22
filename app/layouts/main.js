@@ -1,5 +1,4 @@
 var Form = require(process.cwd() + '/lib/Form.js')
-var Upload = require(process.cwd() + '/lib/Upload.js')
 
 module.exports = async function ($) {
   return /* HTML */ `<!DOCTYPE html>
@@ -16,7 +15,6 @@ module.exports = async function ($) {
       </head>
       <body>
         <script>
-          window.Upload = ${Upload}
           window.Form = ${Form}
         </script>
         <header>
